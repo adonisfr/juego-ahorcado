@@ -1,0 +1,46 @@
+.app-juego-ahorcado {
+  background-color: #202020;
+  background-image: url('./componentes/img/noise.png');
+  height: 100vh;
+}
+
+.contenedor-juego-ahorcado {
+  margin-top: 15px;
+  border-radius: 20px;
+  background-color: #343235;
+  background-image: url('./componentes/img/noise.png');
+}
+
+.barra-puntuacion {
+  background-image: url('./componentes/img/noise.png');
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.color-de-texto {
+  color: #fafafa;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.estilo-letra {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}

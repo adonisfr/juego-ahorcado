@@ -1,0 +1,24 @@
+{
+  "preguntas": {
+    "1": {
+      "pregunta": "¿Cuál es el rió más largo del mundo?",
+      "respuesta": "amazonas"
+    },
+    "2": {
+      "pregunta": "¿Dónde está el Taj Majal?",
+      "respuesta": "india"
+    },
+    "3": {
+      "pregunta": "¿Cúal es la capital de Venezuela?",
+      "respuesta": "caracas"
+    },
+    "4": {
+      "pregunta": "¿Cuál es el río más caudaloso del mundo?",
+      "respuesta": "amazonas"
+    },
+    "5": {
+      "pregunta": "¿Cuál el planeta más cercano al Sol ?",
+      "respuesta": "mercurio"
+    }
+  }
+}
