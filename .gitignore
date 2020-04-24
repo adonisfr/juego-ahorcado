@@ -10,6 +10,17 @@
 
 # production
 /build
+/.idea/
+*.log
+*.log.*
+package-lock.json
+Thumbs.db
+*.diff
+*.patch
+*.bak
+.DS_Store
+.project
+/.vscode/
 
 # misc
 .DS_Store
@@ -21,3 +32,4 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+yarn.lock
