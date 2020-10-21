@@ -24,4 +24,4 @@ Letra.defaultProps = {
   color: ''
 };
 
-export default Letra;
+export default React.memo(Letra);

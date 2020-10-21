@@ -1,12 +1,12 @@
 import React from 'react';
-import propTypes from 'prop-types';
-import { Col, Row, Card, Typography, Tag } from 'antd';
-import { connect } from 'react-redux';
+import { Col, Row, Card, Typography } from 'antd';
 import bg from './img/bg-header.png';
+import Ganados from './Ganados';
+import Perdidos from './Perdidos';
 
 const { Text } = Typography;
 
-const BarraPuntuacion = ({ juegosPerdidos, juegosGanados }) => {
+const BarraPuntuacion = () => {
   return (
     <Card
       bodyStyle={{
@@ -17,30 +17,24 @@ const BarraPuntuacion = ({ juegosPerdidos, juegosGanados }) => {
       bordered={false}
     >
       <Row justify="center" className="barra-puntuacion">
-        <Col span={24}>
-          <Row>
-            <Col span={12} style={{ textAlign: 'center' }}>
-              <Text strong>
-                <span className="color-de-texto">Ganados</span>
-              </Text>
-            </Col>
-            <Col span={12} style={{ textAlign: 'center' }}>
-              <Text strong>
-                <span className="color-de-texto">Perdidos</span>
-              </Text>
-            </Col>
+        <Col span={12}>
+          <Row justify="center">
+            <Text strong>
+              <span className="color-de-texto">Ganados</span>
+            </Text>
           </Row>
-          <Row>
-            <Col span={12} style={{ textAlign: 'center' }}>
-              <Text strong>
-                <Tag>{juegosGanados}</Tag>
-              </Text>
-            </Col>
-            <Col span={12} style={{ textAlign: 'center' }}>
-              <Text strong>
-                <Tag>{juegosPerdidos}</Tag>
-              </Text>
-            </Col>
+          <Row justify="center">
+            <Ganados />
+          </Row>
+        </Col>
+        <Col span={12}>
+          <Row justify="center">
+            <Text strong>
+              <span className="color-de-texto">Perdidos</span>
+            </Text>
+          </Row>
+          <Row justify="center">
+            <Perdidos />
           </Row>
         </Col>
       </Row>
@@ -48,21 +42,4 @@ const BarraPuntuacion = ({ juegosPerdidos, juegosGanados }) => {
   );
 };
 
-BarraPuntuacion.propTypes = {
-  juegosPerdidos: propTypes.number,
-  juegosGanados: propTypes.number
-};
-
-BarraPuntuacion.defaultProps = {
-  juegosPerdidos: 0,
-  juegosGanados: 0
-};
-
-const mapStateToProps = state => {
-  return {
-    juegosPerdidos: state.juegosPerdidos,
-    juegosGanados: state.juegosGanados
-  };
-};
-
-export default connect(mapStateToProps)(BarraPuntuacion);
+export default BarraPuntuacion;

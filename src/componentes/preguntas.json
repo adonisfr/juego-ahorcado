@@ -1,24 +1,34 @@
 {
-  "preguntas": {
-    "1": {
-      "pregunta": "¿Cuál es el rió más largo del mundo?",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Cúal es el río más largo y caudaloso del mundo?",
       "respuesta": "amazonas"
     },
-    "2": {
+    {
+      "id": 2,
       "pregunta": "¿Dónde está el Taj Majal?",
       "respuesta": "india"
     },
-    "3": {
+    {
+      "id": 3,
       "pregunta": "¿Cúal es la capital de Venezuela?",
       "respuesta": "caracas"
     },
-    "4": {
-      "pregunta": "¿Cuál es el río más caudaloso del mundo?",
-      "respuesta": "amazonas"
+    {
+      "id": 4,
+      "pregunta": "¿Cuál es la montaña más alta del planeta Tierra?",
+      "respuesta": "everest"
     },
-    "5": {
-      "pregunta": "¿Cuál el planeta más cercano al Sol ?",
+    {
+      "id": 5,
+      "pregunta": "¿Cuál es el planeta más cercano al Sol ?",
       "respuesta": "mercurio"
+    },
+    {
+      "id": 6,
+      "pregunta": "¿Cuál es el único planeta con un sistema de anillos visible desde la Tierra ?",
+      "respuesta": "saturno"
     }
-  }
+  ]
 }

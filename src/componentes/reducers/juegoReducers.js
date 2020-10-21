@@ -1,3 +1,16 @@
+import listadoPreguntas from '../preguntas.json';
+
+const { preguntas } = listadoPreguntas;
+
+const listadoPreguntasDelJuego = (state = preguntas, action) => {
+  switch (action.type) {
+    case 'ACTUALIZAR_LISTADO_PREGUNTA_DEL_JUEGO':
+      return action.payload;
+    default:
+      return state;
+  }
+};
+
 const pregunta = (state = { pregunta: '', respuesta: '' }, action) => {
   switch (action.type) {
     case 'OBTENER_PREGUNTA':
@@ -62,6 +75,7 @@ const juegosPerdidos = (state = 0, action) => {
 };
 
 export {
+  listadoPreguntasDelJuego,
   pregunta,
   letraSeleccionada,
   cantLetraIncorrectas,

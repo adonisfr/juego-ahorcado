@@ -14,24 +14,20 @@ const partesCuerpo = {
 };
 
 const Ahorcado = ({ cantLetraIncorrectas }) => {
-  const [svgImg, setSvgImg] = useState('');
+  const [svgImg, setSvgImg] = useState({});
 
   useEffect(() => {
-    document
-      .getElementById('inkscape-drawing')
-      .addEventListener('load', function() {
-        const doc = this.getSVGDocument();
-        setSvgImg(doc);
-      });
+    document.getElementById('inkscape-drawing').addEventListener('load', function () {
+      // eslint-disable-next-line react/no-this-in-sfc
+      const doc = this.getSVGDocument();
+      const tmp = { svg: doc };
+      setSvgImg(tmp);
+    });
   }, []);
 
   useEffect(() => {
     const mostrarParteCuerpo = (id, mostrar) => {
-      const tmpArray = svgImg
-        .getElementById(id)
-        .getAttribute('style')
-        .toString()
-        .split(';');
+      const tmpArray = svgImg.svg.getElementById(id).getAttribute('style').toString().split(';');
       const style = tmpArray.reduce((obj, index) => {
         const tmp = index.split(':');
         return {
@@ -40,12 +36,10 @@ const Ahorcado = ({ cantLetraIncorrectas }) => {
         };
       }, {});
       style.opacity = mostrar ? 1 : 0;
-      const update = JSON.stringify(style)
-        .replace(/,/g, ';')
-        .replace(/"|}|{/g, '');
-      svgImg.getElementById(id).setAttribute('style', update);
+      const update = JSON.stringify(style).replace(/,/g, ';').replace(/"|}|{/g, '');
+      svgImg.svg.getElementById(id).setAttribute('style', update);
     };
-    if (svgImg) {
+    if (svgImg.svg) {
       if (cantLetraIncorrectas > 0) {
         if (partesCuerpo && partesCuerpo[cantLetraIncorrectas]) {
           const id = partesCuerpo[cantLetraIncorrectas];
@@ -53,21 +47,16 @@ const Ahorcado = ({ cantLetraIncorrectas }) => {
         }
       } else {
         const listaId = Object.values(partesCuerpo);
-        listaId.forEach(id => {
+        listaId.forEach((id) => {
           mostrarParteCuerpo(id, false);
         });
       }
     }
-  }, [svgImg, cantLetraIncorrectas]);
+  }, [svgImg.svg, cantLetraIncorrectas]);
 
   return (
     <Row justify="center" style={{ width: '100%' }}>
-      <object
-        id="inkscape-drawing"
-        data={imagen}
-        height="300"
-        type="image/svg+xml"
-      >
+      <object id="inkscape-drawing" data={imagen} height="300" type="image/svg+xml">
         prueba
       </object>
     </Row>
@@ -82,7 +71,7 @@ Ahorcado.defaultProps = {
   cantLetraIncorrectas: 0
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     cantLetraIncorrectas: state.cantLetraIncorrectas
   };

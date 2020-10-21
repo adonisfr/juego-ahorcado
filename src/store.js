@@ -2,6 +2,7 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import reduxThunk from 'redux-thunk';
 
 import {
+  listadoPreguntasDelJuego,
   pregunta,
   letraSeleccionada,
   cantLetraIncorrectas,
@@ -13,6 +14,7 @@ import {
 
 export default createStore(
   combineReducers({
+    listadoPreguntasDelJuego,
     pregunta,
     letraSeleccionada,
     cantLetraIncorrectas,
