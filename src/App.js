@@ -6,7 +6,7 @@ import Juego from './componentes/Juego';
 function App() {
   return (
     <Row justify="center" className="app-juego-ahorcado">
-      <Col xs={{ span: 24 }} lg={{ span: 20 }}>
+      <Col xs={{ span: 24 }} lg={{ span: 20 }} xl={16}>
         <Juego />
       </Col>
     </Row>

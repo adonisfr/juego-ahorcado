@@ -13,7 +13,7 @@ const Juego = () => {
   return (
     <Row className="contenedor-juego-ahorcado">
       {listadoPreguntasDelJuego.length > 0 ? (
-        <Row>
+        <Row style={{width:'100%'}}>
           <Row style={{ width: '100%', marginTop: 10 }} justify="center">
             <Col span={12} flex={2}>
               <BarraPuntuacion />
