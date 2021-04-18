@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/juego-ahorcado/static/css/main.876438b5.chunk.css",
+    "main.js": "/juego-ahorcado/static/js/main.1627b337.chunk.js",
+    "main.js.map": "/juego-ahorcado/static/js/main.1627b337.chunk.js.map",
+    "runtime-main.js": "/juego-ahorcado/static/js/runtime-main.b57a0eab.js",
+    "runtime-main.js.map": "/juego-ahorcado/static/js/runtime-main.b57a0eab.js.map",
+    "static/css/2.819fa2c3.chunk.css": "/juego-ahorcado/static/css/2.819fa2c3.chunk.css",
+    "static/js/2.e050dd23.chunk.js": "/juego-ahorcado/static/js/2.e050dd23.chunk.js",
+    "static/js/2.e050dd23.chunk.js.map": "/juego-ahorcado/static/js/2.e050dd23.chunk.js.map",
+    "index.html": "/juego-ahorcado/index.html",
+    "precache-manifest.45c39cfa1a4bd1d459a92c13f15723a0.js": "/juego-ahorcado/precache-manifest.45c39cfa1a4bd1d459a92c13f15723a0.js",
+    "service-worker.js": "/juego-ahorcado/service-worker.js",
+    "static/css/2.819fa2c3.chunk.css.map": "/juego-ahorcado/static/css/2.819fa2c3.chunk.css.map",
+    "static/css/main.876438b5.chunk.css.map": "/juego-ahorcado/static/css/main.876438b5.chunk.css.map",
+    "static/js/2.e050dd23.chunk.js.LICENSE.txt": "/juego-ahorcado/static/js/2.e050dd23.chunk.js.LICENSE.txt",
+    "static/media/horca1.svg": "/juego-ahorcado/static/media/horca1.831f1a7c.svg",
+    "static/media/App.css": "/juego-ahorcado/static/media/noise.a42aa5c7.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b57a0eab.js",
+    "static/css/2.819fa2c3.chunk.css",
+    "static/js/2.e050dd23.chunk.js",
+    "static/css/main.876438b5.chunk.css",
+    "static/js/main.1627b337.chunk.js"
+  ]
+}
